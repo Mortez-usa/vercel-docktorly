@@ -7,7 +7,7 @@ export default async function email(req, res) {
     const { name, email, message } = req.body;
     const msg = {
       to: "info@docktorly.com", // Change to your recipient.
-      from: "info@docktorly.com", // Change to your verified sender
+      from: "info@docktorly.com", // Change to your verified sender.
       subject: `${name} has sent you a message`,
       text: message,
       html: `

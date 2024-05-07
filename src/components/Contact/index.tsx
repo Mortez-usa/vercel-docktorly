@@ -110,7 +110,6 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <Toaster />
                     <button
                       type="submit"
                       value='email'

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
+import { Toaster, toast } from "sonner";
 
 const Contact = () => {
   const [email, setEmail] = useState({
@@ -8,7 +9,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     const sendEmail = async (emailData) => {
       const response = await fetch("/api/email", {
@@ -19,6 +20,8 @@ const Contact = () => {
         body: JSON.stringify(emailData),
       });
       if (response.ok && response.status === 200) {
+        <Toaster/>
+        {() => {toast.success('My first toast');}}
         console.log("Email sent!");
         location.reload();
       } else {
@@ -107,8 +110,10 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
+                    <Toaster />
                     <button
                       type="submit"
+                      value='email'
                       onClick={handleSubmit}
                       className="rounded-3xl bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                     >

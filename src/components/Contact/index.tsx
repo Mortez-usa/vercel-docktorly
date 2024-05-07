@@ -10,7 +10,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const sendEmail = async (emailData) => {
       const response = await fetch("/api/email", {

@@ -12,6 +12,16 @@ const Contact = () => {
   });
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    {
+      () => {
+        toast.success("Your message has been sent successfully");
+      };
+    }
+    {
+      () => {
+        toast.error("Your message has not been sent");
+      };
+    }
     const sendEmail = async (emailData) => {
       const response = await fetch("/api/email", {
         method: "POST",

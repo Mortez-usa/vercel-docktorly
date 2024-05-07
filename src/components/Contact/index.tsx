@@ -20,8 +20,6 @@ const Contact = () => {
         body: JSON.stringify(emailData),
       });
       if (response.ok && response.status === 200) {
-        <Toaster/>
-        {() => {toast.success('Your message has been sent successfully');}}
         console.log("Email sent!");
         location.reload();
       } else {
@@ -118,10 +116,11 @@ const Contact = () => {
                       ></textarea>
                     </div>
                   </div>
+                  <Toaster/>
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      onClick={handleSubmit}
+                      onClick={() => {toast.error("Your message has not been sent");handleSubmit;}}
                       className="rounded-3xl bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                     >
                       Submit

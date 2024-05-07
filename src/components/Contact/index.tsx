@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import NewsLatterBox from "./NewsLatterBox";
-import { toast, Toaster } from "sonner";
-
+import { toast } from "sonner";
 
 const Contact = () => {
   const [email, setEmail] = useState({
@@ -12,7 +10,7 @@ const Contact = () => {
   });
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    e.stopPropagation();
+
     const sendEmail = async (emailData) => {
       const response = await fetch("/api/email", {
         method: "POST",
@@ -22,18 +20,14 @@ const Contact = () => {
         body: JSON.stringify(emailData),
       });
       if (response.ok && response.status === 200) {
-        console.log("Email sent!");
-        location.reload();
+        toast.success("Your message has been sent successfully");
+        setEmail({ name: "", email: "", message: "" });
+
+        return;
       } else {
-        <Toaster />;
-        {
-          () => {
-            toast.error(
-              "Your message has not been sent",
-            );
-          };
-        }
-        console.log("Email failed to send");
+        toast.error("Your message has not been sent");
+
+        return;
       }
     };
 
@@ -78,6 +72,7 @@ const Contact = () => {
                       <input
                         type="text"
                         name="name"
+                        value={email.name}
                         onChange={handleChange}
                         placeholder="Enter your name"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -95,6 +90,7 @@ const Contact = () => {
                       <input
                         type="email"
                         name="email"
+                        value={email.email}
                         onChange={handleChange}
                         placeholder="Enter your email"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -111,6 +107,7 @@ const Contact = () => {
                       </label>
                       <textarea
                         name="message"
+                        value={email.message}
                         onChange={handleChange}
                         rows={5}
                         placeholder="Enter your Message"
@@ -118,11 +115,11 @@ const Contact = () => {
                       ></textarea>
                     </div>
                   </div>
-                  <Toaster />
+
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      onClick={() => {toast.success("Your message has been sent successfully");handleSubmit;}}
+                      onClick={handleSubmit}
                       className="rounded-3xl bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                     >
                       Submit
@@ -132,9 +129,6 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          {/* <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
-          </div> */}
         </div>
       </div>
     </section>

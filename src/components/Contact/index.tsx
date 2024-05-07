@@ -45,6 +45,7 @@ const Contact = () => {
   };
 
   const handleChange = (e: any) => {
+    e.preventDefault();
     setEmail({ ...email, [e.target.name]: e.target.value });
   };
 

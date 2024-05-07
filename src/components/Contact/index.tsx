@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
-import { Toaster, toast } from "sonner";
+import { toast, Toaster } from "sonner";
+
 
 const Contact = () => {
   const [email, setEmail] = useState({
@@ -116,11 +117,14 @@ const Contact = () => {
                       ></textarea>
                     </div>
                   </div>
-                  <Toaster/>
+                  <Toaster />
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      onClick={() => {toast.error("Your message has not been sent");handleSubmit;}}
+                      onClick={() => {
+                        toast.error("Your message has not been sent");
+                        handleSubmit;
+                      }}
                       className="rounded-3xl bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                     >
                       Submit

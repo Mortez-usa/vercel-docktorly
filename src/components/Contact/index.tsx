@@ -25,6 +25,14 @@ const Contact = () => {
         console.log("Email sent!");
         location.reload();
       } else {
+        <Toaster />;
+        {
+          () => {
+            toast.error(
+              "Your message has not been sent",
+            );
+          };
+        }
         console.log("Email failed to send");
       }
     };
@@ -112,7 +120,6 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      value='email'
                       onClick={handleSubmit}
                       className="rounded-3xl bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                     >

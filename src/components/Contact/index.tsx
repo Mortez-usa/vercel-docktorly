@@ -21,7 +21,7 @@ const Contact = () => {
       });
       if (response.ok && response.status === 200) {
         <Toaster/>
-        {() => {toast.success('My first toast');}}
+        {() => {toast.success('Your message has been sent successfully');}}
         console.log("Email sent!");
         location.reload();
       } else {

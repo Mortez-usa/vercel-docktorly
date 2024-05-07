@@ -12,6 +12,7 @@ const Contact = () => {
   });
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    e.stopPropagation();
     const sendEmail = async (emailData) => {
       const response = await fetch("/api/email", {
         method: "POST",

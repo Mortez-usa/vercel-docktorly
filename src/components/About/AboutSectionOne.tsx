@@ -24,8 +24,10 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Revolutionary platform that streamlines the consultation"
-                paragraph="A platform that streamlines the consultation process and enhances patient care."
+                title="Say Goodbye to Playing Phone Tag"
+                paragraph="
+Timely communication among healthcare professionals is key to better patient care, but this can be challenging across different settings, especially when you need to communicate with colleagues outside of your clinic or institution. Docktorly provides a unified solution for all your peer-to-peer communication needs. Whether you want to place an E consult or just to have an informal conversation with your colleague, Docktorly’s secure and intuitive platform allows you to connect you to the right people quickly.
+"
                 mb="44px"
               />
 

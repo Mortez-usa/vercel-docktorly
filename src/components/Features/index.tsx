@@ -9,7 +9,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="Main Features"
-            paragraph="Access specialists’ opinions without any waiting time for referrals."
+            paragraph="Decrease your wait time to talk to your colleagues."
             center
           />
 

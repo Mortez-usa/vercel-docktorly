@@ -45,8 +45,8 @@ const AboutSectionTwo = () => {
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                   Knowing that we will be dealing with sensitive personal
-                  information, we fully intend on building a platform that is
-                  secure and HIPPA compliant.
+                  information, we are serious about security and fully intend on building a platform that is
+                  HIPPA compliant.
                 </p>
               </div>
               {/* <div className="mb-1">

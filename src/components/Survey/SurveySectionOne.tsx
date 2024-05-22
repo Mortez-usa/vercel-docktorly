@@ -23,13 +23,13 @@ const SurveySectionOne = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <p className="mb-5 ml-80 mr-80 flex items-center text-lg font-medium text-body-color">
-        At Docktorly, we understand the challenges that direct primary care
-        doctors face when seeking specialist opinions for their patients.
+        At Docktorly, we understand the challenges that 
+        doctors face when they need to communicate with their outside colleagues to coordinate patient care.
         That&#39;s why we have developed a revolutionary platform that
-        streamlines the consultation process and enhances patient care.
+        streamlines the communication process to improve day-to-day work experience.
       </p>
       <p className="mb-5 ml-80 mr-80 flex items-center text-lg font-medium text-body-color">
-        We&#39;re inviting our community of primary care providers to share their
+        We&#39;re inviting our community of health providers to share their
         valuable insights and ideas through this survey.
       </p>
       <hr className="ml-96 mr-96"/>

@@ -37,10 +37,10 @@ const AboutPage = () => {
         overall quality of patient-centered care.
       </p>
       <p className="mb-5 ml-80 mr-80 flex items-center text-lg font-medium text-body-color">
-        Through Docktorly, we aim to: Reduce wait times and improve access to
-        specialty consults Promote real-time collaboration and continuous
-        learning Cultivate local networks of doctors and independent practices
-        Improve both doctor and patient experiences in healthcare We are driven
+        Through Docktorly, we aim to: reduce wait times and improve access to
+        specialty consults, promote real-time collaboration and continuous
+        learning, cultivate local networks of doctors and independent practices,
+        improve both doctor and patient experiences in healthcare. We are driven
         to develop innovative solutions that solve real-world problems and
         elevate the practice of medicine.
       </p>

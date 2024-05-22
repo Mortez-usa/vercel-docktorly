@@ -31,10 +31,12 @@ const AboutSectionTwo = () => {
                   From doctors for doctors
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Docktorly is an on-demand virtual medical consultation
-                  platform designed to support small primary care practices by
-                  facilitating connections between primary care providers and
-                  specialists.
+                  We built this platform with busy professionals like you in
+                  mind. Our goal is to help you improve communication efficiency
+                  and collaborate with colleagues without the barriers and
+                  friction that comes with traditional phone and fax
+                  correspondence. We had doctors’ input at every stage of our
+                  platform development so this tool feels tailor-made for you.
                 </p>
               </div>
               <div className="mb-9">

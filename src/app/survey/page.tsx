@@ -14,7 +14,7 @@ const SurveyPage = () => {
     <>
       <Breadcrumb
         pageName="Your Voice"
-        description="Share your insights to shape our next innovation in peer-to-peer consultations."
+        description="Share your insights to shape our next innovation in peer-to-peer communications."
       />
       <SurveySectionOne />
       <SurveySectionTwo />

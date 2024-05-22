@@ -40,7 +40,7 @@ const AboutPage = () => {
         Through Docktorly, we aim to: reduce wait times and improve access to
         specialty consults, promote real-time collaboration and continuous
         learning, cultivate local networks of doctors and independent practices,
-        improve both doctor and patient experiences in healthcare. We are driven
+        and improve both doctor and patient experiences in healthcare. We are driven
         to develop innovative solutions that solve real-world problems and
         elevate the practice of medicine.
       </p>
